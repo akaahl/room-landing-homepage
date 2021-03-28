@@ -29,12 +29,19 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
+  position: relative;
 }
 
 .main-container header .navbar {
   display: flex;
   align-items: center;
   padding: 3rem;
+}
+
+.main-container header .navbar .hamburger-icon {
+  cursor: pointer;
+  margin-right: 7rem;
+  display: none;
 }
 
 .main-container header .navbar ul {
@@ -69,6 +76,26 @@ body {
 .main-container .navbar ul li a:hover::after {
   width: 40%;
   transition: width 0.2s linear;
+}
+
+.main-container header .mobile-buttons {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: none;
+}
+
+.main-container header .mobile-buttons button {
+  outline: none;
+  border: none;
+  background: var(--black);
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+}
+
+.main-container header .mobile-buttons button:hover {
+  background: var(--dark-gray);
+  transition: background 0.4s linear;
 }
 
 .main-container .hero-section {
@@ -131,6 +158,7 @@ body {
   border: none;
   background: var(--black);
   padding: 1rem 1.5rem;
+  cursor: pointer;
 }
 
 .main-container .hero-section .buttons button:hover {
@@ -145,7 +173,6 @@ footer {
 }
 
 footer .image-about-dark {
-  /* flex: 1; */
   background-image: url("images/image-about-dark.jpg");
   background-position: center;
   background-repeat: no-repeat;
@@ -155,7 +182,6 @@ footer .image-about-dark {
 }
 
 footer .about-section {
-  /* flex: 1.3; */
   height: 100%;
   padding: 4rem 2rem;
 }
@@ -172,11 +198,104 @@ footer .about-section p {
 }
 
 footer .image-about-light {
-  /* flex: 1; */
   background-image: url("images/image-about-light.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
   height: 100%;
   width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .main-container .hero-section {
+    padding: 2rem 4rem;
+  }
+
+  .main-container .hero-section h1 {
+    width: 100%;
+    font-size: 1.5rem;
+  }
+
+  .main-container .hero-section p {
+    width: 100%;
+  }
+
+  .main-container .hero-section a {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-container .navbar ul li {
+    margin: 0 5px;
+  }
+
+  .main-container .hero-section h1 {
+    font-size: 1rem;
+  }
+
+  .main-container .hero-section p {
+    font-size: 10px;
+  }
+
+  .main-container .hero-section a {
+    font-size: 10px;
+  }
+
+  footer .about-section {
+    padding: 2rem;
+  }
+
+  footer p {
+    font-size: 10px;
+  }
+
+  @media (max-width: 425px) {
+    body {
+      min-height: 100vh;
+    }
+
+    .main-container {
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .main-container header .navbar .hamburger-icon {
+      display: block;
+    }
+
+    .main-container header .navbar ul {
+      display: none;
+    }
+
+    .main-container header .mobile-buttons {
+      display: flex;
+    }
+
+    .main-container .hero-section {
+      padding: 3rem 2rem;
+    }
+
+    .main-container .hero-section h1 {
+      font-size: 1.5rem;
+    }
+
+    .main-container .hero-section p {
+      font-size: 11px;
+      margin-bottom: 2rem;
+    }
+
+    .main-container .hero-section .buttons {
+      display: none;
+    }
+
+    footer {
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    footer .about-section {
+      padding: 3rem 2rem;
+    }
+  }
 }
