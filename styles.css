@@ -13,7 +13,7 @@
 
 body {
   height: 100vh;
-  font-family: "Spartan", sans-serif;
+  font-family: 'Spartan', sans-serif;
   font-size: 12px;
 }
 
@@ -25,7 +25,7 @@ body {
 
 .main-container header {
   flex: 2;
-  background-image: url("images/desktop-image-hero-1.jpg");
+  /* background-image: url("images/desktop-image-hero-1.jpg"); */
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -63,7 +63,7 @@ body {
 }
 
 .main-container .navbar ul li a::after {
-  content: "";
+  content: '';
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -173,7 +173,7 @@ footer {
 }
 
 footer .image-about-dark {
-  background-image: url("images/image-about-dark.jpg");
+  background-image: url('images/image-about-dark.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -198,7 +198,7 @@ footer .about-section p {
 }
 
 footer .image-about-light {
-  background-image: url("images/image-about-light.jpg");
+  background-image: url('images/image-about-light.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
